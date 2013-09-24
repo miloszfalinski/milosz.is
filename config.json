@@ -1,9 +1,9 @@
 {
   "locals": {
     "url": "http://localhost:8080",
-    "name": "The Wintersmith's blog",
-    "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "name": "milosz.is",
+    "owner": "Milosz Falinski",
+    "description": "Hello. I'm Milosz. I'm a designer/developer working in Edinburgh. I like foxes & physics. Oh, and books."
   },
   "plugins": [
     "./plugins/paginator.coffee"
