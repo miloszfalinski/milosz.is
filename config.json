@@ -6,7 +6,8 @@
     "description": "Hello. I'm Milosz. I'm a designer/developer working in Edinburgh. I like foxes & physics. Oh, and books."
   },
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "wintersmith-node-sass"
   ],
   "require": {
     "moment": "moment",
@@ -22,5 +23,12 @@
   },
   "paginator": {
     "perPage": 3
+  },
+  "node-sass": {
+    "minify": false
+  },
+  "clean-css": {
+    "keepBreaks": true,
+    "removeEmpty": true
   }
 }
