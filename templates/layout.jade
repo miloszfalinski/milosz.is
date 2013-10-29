@@ -13,9 +13,8 @@ html(lang='en')
           = locals.name
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
-      link(rel='stylesheet', href='/css/main.css')
-      
       link(rel='stylesheet', href='http://fast.fonts.net/cssapi/387d2aef-8464-47e7-885c-8f1f92b50f81.css')
+      link(rel='stylesheet', href='/css/main.css')
   body(class=bodyclass)
     header.header
       div.content-wrap
@@ -31,11 +30,16 @@ html(lang='en')
     footer
       div.content-wrap
         block footer
-          section.about
-            !=contents['about.md'].html
-          section.copy
-            p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+          // section.about
+          //   !=contents['about.md'].html
+          // section.copy
+          //   p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+          //     a(href='https://github.com/jnordberg/wintersmith') Wintersmith
           section.footer-text
             p
-              a(href='http://milosz.is') Milosz.is
+              a(href='/') Milosz.is
+          section.footer-icons
+            a(href='/bucket-list', class='icon bucket')
+              span bucket
+            a(href='/feed.xml', class='icon feed')
+              span feed

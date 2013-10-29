@@ -3,7 +3,7 @@
     "url": "http://localhost:8080",
     "name": "milosz.is",
     "owner": "Milosz Falinski",
-    "description": "Hello. I'm Milosz. I'm a designer/developer working in Edinburgh. I like foxes & physics. Oh, and books."
+    "description": "Hello. I'm a designer & developer working at Studio NEC. I live in Edinburgh, and enojy music, books, and playing around with pens & paints. Plain stuff."
   },
   "plugins": [
     "./plugins/paginator.coffee",
