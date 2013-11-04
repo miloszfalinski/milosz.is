@@ -23,7 +23,7 @@ body, a {
 }
 
 a:hover {
-	color: #ff8000;
+	color: #E64B3E;
 	text-decoration: underline;
 }
 
@@ -129,13 +129,13 @@ footer {
 	margin: 3em 0;
 }
 
-footer .nav {
+#content .nav {
 	text-align: center;
 	margin-top: 5em;
 	margin-bottom: 3.5em;
 }
 
-footer .nav a {
+#content .nav a {
 	padding: 0 0.5em;
 	font-size: 1.2em;
 	text-decoration: none;
@@ -411,7 +411,7 @@ code.lang-markdown .bullet {
 	border: 0 !important;
 	margin: 0 !important;
 	}
-	footer .nav {
+	#content .nav {
 	margin: 1em 0;
 	}
 	footer .about {

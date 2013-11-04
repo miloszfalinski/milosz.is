@@ -6,12 +6,14 @@
 //	 font-family:'Avenir Next W01 Light';
 //
 
+@import 'utils';
 
 
 // Header
 .header{
 	margin: 2em 0 3em;
 	height: 64px;
+	
 	h1{
 		display: block;
 		width: 64px;
@@ -22,6 +24,7 @@
 		-moz-perspective: 1000;
 		-o-perspective:1000;
 		position: relative;
+		
 		a{
 			display: block;
 			width: 64px;
@@ -53,12 +56,12 @@
 				background-size: 100% 100%;
 				background-repeat: no-repeat;
 				
-				
 				-webkit-backface-visibility: hidden;
 					 -moz-backface-visibility: hidden;
 					 	 -o-backface-visibility: hidden;
 					 			backface-visibility: hidden;
 			}
+			
 			span.front{
 				background-image: url('../images/logo.png');
 			}
@@ -84,16 +87,18 @@
 		text-align: center;
 		margin-bottom: 20px;
 	}
+	
 	.description {
 		color: #9A9A9A;
 		text-align: center;
+		
 		p {
-			font-family: 'Avenir Next W01 Light', 'Avenir Next', sans-serif;
-			// font-weight: 400;
+			font-family: 'Avenir Next W01 Light', $font-stack;
 			margin: 0;
 			padding: 0 2.2em;
 		}
 	}
+	
 	.icons{
 		
 	}
@@ -102,11 +107,33 @@
 // Home - Content Boxes
 
 // Footer
-
-
-// Utils
-.hide-text {
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+footer{
+  background-color: #424242;
+  margin-bottom: 0;
+  padding:45px 0;
+  height: 1em;
+  
+  .footer-text{
+    float: left;
+    p{
+      a{
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 19px;
+        font-family: 'Avenir Next W01 Light', $font-stack;
+        text-decoration: none;
+        opacity: 0.6;
+        @include transition(all, 0.2s, ease-in-out);
+        
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .footer-icons{
+    float: right;
+  }
 }
+
