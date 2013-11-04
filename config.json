@@ -7,7 +7,8 @@
   },
   "plugins": [
     "./plugins/paginator.coffee",
-    "wintersmith-node-sass"
+    "wintersmith-node-sass",
+    "wintersmith-coffee"
   ],
   "require": {
     "moment": "moment",

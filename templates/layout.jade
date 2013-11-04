@@ -12,19 +12,31 @@ html(lang='en')
         block title
           = locals.name
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+      
+      // Stylesheets
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href='http://fast.fonts.net/cssapi/387d2aef-8464-47e7-885c-8f1f92b50f81.css')
       link(rel='stylesheet', href='/css/base.css')
       link(rel='stylesheet', href='/css/site.css')
+      
   body(class=bodyclass)
     header.header
       div.content-wrap
         block header
-          div.logo
-            h1
-              a(href=locals.url)= locals.name
+          h1(ontouchstart='this.classList.toggle("hover");')
+            a(href=locals.url)
+              span.front
+              span.back
+                  
+    section#intro
+      div.content-wrap
+        block intro
+          div.intro
+            h2 Designer &amp; Developer
             .description
-              !=contents['about.md'].html
+              !=contents['intro.md'].html
+            .icons
+              
     div#content
       div.content-wrap
         block content
@@ -32,16 +44,15 @@ html(lang='en')
     footer
       div.content-wrap
         block footer
-          // section.about
-          //   !=contents['about.md'].html
-          // section.copy
-          //   p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-          //     a(href='https://github.com/jnordberg/wintersmith') Wintersmith
           section.footer-text
             p
-              a(href='/') Milosz.is
+              a(href=locals.url) Milosz.is
           section.footer-icons
             a(href='/bucket-list', class='icon bucket')
               span bucket
             a(href='/feed.xml', class='icon feed')
               span feed
+              
+    // Scripts
+    script(src='/bower_components/zepto/zepto.min.js')
+    script(src='/scripts/script.js')

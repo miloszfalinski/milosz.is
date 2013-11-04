@@ -1,12 +1,112 @@
+//
+// Font names:
+// 	 font-family:'AvenirNextLTW01-Regular';
+// 	 font-family:'AvenirNextLTW01-Medium';
+// 	 font-family:'Avenir Next LT W01 Demi';
+//	 font-family:'Avenir Next W01 Light';
+//
+
 
 
 // Header
-
-.header .description {
-	color: #9A9A9A;
-	text-align: center;
-	p{
-		margin: 0;
-		padding: 0 2.2em;
+.header{
+	margin: 2em 0 3em;
+	height: 64px;
+	h1{
+		display: block;
+		width: 64px;
+		height: 64px;
+		overflow: hidden;
+		perspective: 1000;
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-o-perspective:1000;
+		position: relative;
+		a{
+			display: block;
+			width: 64px;
+			height: 64px;
+			position: absolute;
+			
+			-webkit-transition: 0.4s;
+				 -moz-transition: 0.4s;
+					 -o-transition: 0.4s;
+							transition: 0.4s;
+							
+			-webkit-transform-style: preserve-3d;
+				 -moz-transform-style: preserve-3d;
+					 -o-transform-style: preserve-3d;
+							transform-style: preserve-3d;
+							
+			&:hover{
+				-webkit-transform: rotateY( 180deg );
+				-moz-transform: rotateY( 180deg );
+					-o-transform: rotateY( 180deg );
+						 transform: rotateY( 180deg );
+			}
+			
+			span{
+				width: 64px;
+				height: 64px;
+				display: block;
+				position: absolute;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				
+				
+				-webkit-backface-visibility: hidden;
+					 -moz-backface-visibility: hidden;
+					 	 -o-backface-visibility: hidden;
+					 			backface-visibility: hidden;
+			}
+			span.front{
+				background-image: url('../images/logo.png');
+			}
+			
+			span.back{
+				background-image: url('../images/name.png');
+				
+				-webkit-transform: rotateY( 180deg );
+					 -moz-transform: rotateY( 180deg );
+						 -o-transform: rotateY( 180deg );
+								transform: rotateY( 180deg );
+			}
+		}
 	}
+}
+
+// Intro
+#intro {
+	h2{
+		font-size: 34px;
+		color: #595959;
+		line-height: 46px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.description {
+		color: #9A9A9A;
+		text-align: center;
+		p {
+			font-family: 'Avenir Next W01 Light', 'Avenir Next', sans-serif;
+			// font-weight: 400;
+			margin: 0;
+			padding: 0 2.2em;
+		}
+	}
+	.icons{
+		
+	}
+}
+
+// Home - Content Boxes
+
+// Footer
+
+
+// Utils
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
