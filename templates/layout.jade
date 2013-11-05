@@ -36,11 +36,29 @@ html(lang='en')
             .description
               !=contents['intro.md'].html
             .icons
+              .icon-container(id='mail')
+                a(href='mailto:m@milosz.is', class='icon')
+                  span.front
+                  span.back
+              .icon-container(id='twitter')
+                a(href='http://twitter.com/dotmilosz', class='icon')
+                  span.front
+                  span.back
+              .icon-container(id='dribbble')
+                a(href='http://dribbble.com/milosz', class='icon')
+                  span.front
+                  span.back
+              .icon-container(id='rdio')
+                a(href='http://www.rdio.com/people/miloszfalinski/', class='icon')
+                  span.front
+                  span.back
+              .icon-container(id='github')
+                a(href='https://github.com/miloszfalinski', class='icon')
+                  span.front
+                  span.back
               
     div#content
-      div.content-wrap
-        block content
-          h2 Welcome to zombocom!
+      block content
     footer
       div.content-wrap
         block footer

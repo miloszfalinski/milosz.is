@@ -11,7 +11,7 @@
 
 // Header
 .header{
-	margin: 2em 0 3em;
+	margin: 1.5em 0 2.5em;
 	height: 64px;
 	
 	h1{
@@ -19,10 +19,10 @@
 		width: 64px;
 		height: 64px;
 		overflow: hidden;
-		perspective: 1000;
 		-webkit-perspective: 1000;
 		-moz-perspective: 1000;
 		-o-perspective:1000;
+    perspective: 1000;
 		position: relative;
 		
 		a{
@@ -100,16 +100,139 @@
 	}
 	
 	.icons{
+		width:60%;
+		height: 42px;
+		margin: 2em auto 3em;
+		position: relative;
 		
+		.icon-container{
+      width: 42px;
+  		height: 42px;
+  		display: block;
+  		overflow: hidden;
+  		position: absolute;
+  		top: 0;
+  		-webkit-perspective: 800;
+  		-moz-perspective: 800;
+  		-o-perspective:800;
+  		perspective: 800;
+  		
+  		&:last-child{
+  		}
+  		&#mail{
+    		left:0;
+        margin-left: -21px;
+  		}
+  		&#twitter{
+    		left:25%;
+    		margin-left: -21px;
+  		}
+  		&#dribbble{
+  		  left:50%;
+  	    margin-left: -21px;
+      }
+  		&#rdio{
+  		  left:75%;
+  		  margin-left: -21px;
+  		}
+  		&#github{
+  		  right:0;
+  		  margin-right: -21px;
+  		}
+  		&#mail span{
+  		  background-position-x: 0px;
+  		}
+  		&#twitter span{
+  		  background-position-x: -42px;
+  		}
+  		&#dribbble span{
+  		  background-position-x: -84px;
+  		}
+  		&#rdio span{
+  		  background-position-x: -126px;
+  		}
+  		&#github span{
+  		  background-position-x: -168px;
+  		}
+  		.icon{
+    		display: block;
+    		width: 42px;
+    		height: 42px;
+    		position: absolute;
+    		
+    		-webkit-transition: 0.2s;
+    		   -moz-transition: 0.2s;
+    		     -o-transition: 0.2s;
+    		        transition: 0.2s;
+    		        
+    		-webkit-transform-style: preserve-3d;
+    		   -moz-transform-style: preserve-3d;
+    		     -o-transform-style: preserve-3d;
+    		        transform-style: preserve-3d;
+    		        
+        &:hover{
+          -webkit-transform: rotateY( -180deg );
+          -moz-transform: rotateY( -180deg );
+            -o-transform: rotateY( -180deg );
+               transform: rotateY( -180deg );
+        }
+        
+        span{
+          width: 42px;
+          height: 42px;
+          display: block;
+          position: absolute;
+          background-size: auto 200% ;
+          background-repeat: no-repeat;
+          background-image: url('../images/icons.png');
+          
+          -webkit-backface-visibility: hidden;
+             -moz-backface-visibility: hidden;
+                -o-backface-visibility: hidden;
+                   backface-visibility: hidden;
+        }
+        
+        span.front{
+        }
+        
+        span.back{
+          background-position-y: -42px ;
+          
+          -webkit-transform: rotateY( -180deg );
+             -moz-transform: rotateY( -180deg );
+               -o-transform: rotateY( -180deg );
+                  transform: rotateY( -180deg );
+        }
+  		}
+		}
 	}
 }
 
 // Home - Content Boxes
-
+#content{
+  &>section{
+    background: yellow;
+    margin: 0;
+    padding: 2.5em 0;
+    color: #FFF;
+  }
+  section#nec{
+    background: #B54A3D;
+  }
+  section#aws{
+    background: #2E98C8;
+  }
+  section#drib{
+    background: #4C4B4C;
+  }
+  section#writing{
+    background: #333333;
+  }
+}
 // Footer
 footer{
   background-color: #424242;
-  margin-bottom: 0;
+  margin: 0;
   padding:45px 0;
   height: 1em;
   
