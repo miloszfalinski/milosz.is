@@ -314,6 +314,53 @@
   }
   section#writing{
     background: #333333;
+    
+    .section-description{
+      margin-top: 3.3em;
+    }
+    article{
+      margin-bottom: 20px;
+      
+      h3{
+        font-size: 1.15em;
+        font-family: 'Avenir Next LT W01 Demi', $font-stack;
+        color: #FFFFFF;
+        letter-spacing: 0px;
+        margin:0;
+        text-align: left;
+        font-style: normal;
+        a{
+          color: #FFF;
+          text-decoration: none;
+          opacity: 1;
+          @include transition(all, 0.2s, ease-in-out);
+          &:hover{
+            opacity: 0.6;
+          }
+        }
+        small.date{
+          margin-left: 15px;
+          font-family: 'AvenirNextLTW01-Regular', $font-stack;
+          font-size: 0.788em;
+          line-height: 1em;
+          color: #B4B4B4;
+          font-variant: normal;
+          text-transform: capitalize;
+        }
+      }
+    }
+    a.archive-link{
+      font-family: 'AvenirNextLTW01-Regular', $font-stack;
+      font-size: 14px;
+      color: #B4B4B4;
+      line-height: 23px;
+      text-decoration: none;
+      opacity: 1;
+      @include transition(all, 0.2s, ease-in-out);
+      &:hover{
+        opacity: 0.6;
+      }
+    }
   }
 }
 // Footer

@@ -36,8 +36,13 @@ block content
         span Thoughts &amp; Notes
         h2 Writing
       .section-description
-        p nec
-      
+        each article in articles
+          article
+              h3
+                a(href=article.url)= article.title
+                small.date= moment.utc(article.date).format('DD MMM')
+        
+        a(href='/archive.html',class='archive-link') View Archive
       
 //  include author
 //  each article in articles
