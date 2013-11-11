@@ -3,19 +3,40 @@ extends layout
 block content
   section#nec
     div.content-wrap
-      p nec
+      .section-title
+        span I work at
+        h2
+          a(href='http://studionec.com') Studio NEC
+          small 2011 - Present
+      .section-description
+        p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci.
 
   section#aws
     div.content-wrap
-      p aws
+      .section-title
+        span Side Project
+        h2
+          a(href='http://androidwallpape.rs') Android Wallpape.rs
+      .section-description
+        p Idea behind this site is very simple. Provide a place where nice - and only nice - wallpapers live. I choose images based on my personal picky taste and on how they work with Android.
       
   section#drib
     div.content-wrap
-      p drib
+      .section-title
+        span Other stuff
+        h2#drib-title
+          a(href='http://dribbble.com/milosz') Dribbble
+      .section-description
+        p Turns out I mostly draw foxes.
+    #dribbble-shots
       
   section#writing
     div.content-wrap
-      p writing
+      .section-title
+        span Thoughts &amp; Notes
+        h2 Writing
+      .section-description
+        p nec
       
       
 //  include author
